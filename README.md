@@ -14,7 +14,7 @@ From now on this tutorial assume that you have MongoDB installed and running.
 
     `virtualenv venv`
 
-and activate it
+    and activate it
 
     `source venv/bin/activate`
 
@@ -34,7 +34,7 @@ If you're not familiar with virtualenv, follow this link - http://docs.python-gu
 
     `>> db.createCollection('world')`
 
-Close Mongo shell
+    Close Mongo shell
 
 6. Import collection from world_bank.json:
 
