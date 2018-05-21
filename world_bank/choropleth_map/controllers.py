@@ -1,10 +1,9 @@
 import json
 
-from flask import (
-    Blueprint, render_template
-)
+from flask import Blueprint, render_template
 
 from world_bank.db import mongo_db
+
 
 main = Blueprint('main', __name__)
 world_collection = mongo_db.world

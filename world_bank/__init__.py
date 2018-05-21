@@ -1,9 +1,6 @@
-from flask import (
-    Flask
-)
+from flask import Flask
 
 from .choropleth_map.controllers import main
-
 
 app = Flask(__name__)
 
