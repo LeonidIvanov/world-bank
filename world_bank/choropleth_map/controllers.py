@@ -15,14 +15,15 @@ def index():
     world_collection_json = world_collection.find()
     for project in world_collection_json:
         if project['countryname'] != project['regionname']:
-            if project['countrycode'] in projects_by_countries.keys():
-                projects_by_countries[project['countrycode']]['projects'].append({
+            countrycode = project['countrycode']
+            if countrycode in projects_by_countries.keys():
+                projects_by_countries[countrycode]['projects'].append({
                     'project_name': project['project_name'],
                     'lendprojectcost': project['lendprojectcost']
                 })
-                projects_by_countries[project['countrycode']]['sum'] += project['lendprojectcost']
+                projects_by_countries[countrycode]['sum'] += project['lendprojectcost']
             else:
-                projects_by_countries[project['countrycode']] = {
+                projects_by_countries[countrycode] = {
                     'countryname': project['countryname'],
                     'projects': [{
                         'project_name': project['project_name'],
